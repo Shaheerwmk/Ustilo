@@ -3,15 +3,15 @@
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 col-md-offset-2">
             <ul class="nav nav-tabs">
-                    <label class="btn btn-secondary active">
-                        <input type="radio" class="active" name="options" id="option1" autocomplete="off" checked (click)="routeToUsers()" *ngIf="routed"> Sign-in
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Sign-up
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option3" autocomplete="off"> Crud
-                    </label>
+                <label class="btn btn-secondary active">
+                    <input type="radio" class="active" name="options" id="option1" autocomplete="off" checked (click)="routeToSignUp()"> Sign-up
+                </label>
+                 <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Sign-in
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option3" autocomplete="off" (click)="routeToUser()"> Users
+                </label>
             </ul>
         </div>
     </div>

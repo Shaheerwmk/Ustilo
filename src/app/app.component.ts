@@ -13,7 +13,12 @@ export class AppComponent {
   routed:boolean=true;
   title = 'Ustilo';
 
-  routeToUsers(){
+  routeToSignUp(){
+    this.routed = false;
+    this.router.navigate(['/sign-up'])
+  }
+
+  routeToUser(){
     this.routed = false;
     this.router.navigate(['/user'])
   }
