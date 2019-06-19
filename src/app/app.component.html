@@ -1,4 +1,33 @@
-<div *ngIf="routed">Shaheer Wamique Angular App
-    <button (click)="routeToUsers()">Click</button>
+<!-- <button type="button" class="xyx btn btn-dark" (click)="routeToUsers()" *ngIf="routed">Sign-in</button> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 col-md-offset-2">
+            <ul class="nav nav-tabs">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" class="active" name="options" id="option1" autocomplete="off" checked (click)="routeToUsers()" *ngIf="routed"> Sign-in
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Sign-up
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Home
+                    </label>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
+<!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked (click)="routeToUsers()" *ngIf="routed"> Sign-in
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> Sign-up
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Home
+        </label>
+</div>!-->
+
 <router-outlet></router-outlet>
