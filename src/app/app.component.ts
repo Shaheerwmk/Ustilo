@@ -18,6 +18,11 @@ export class AppComponent {
     this.router.navigate(['/sign-up'])
   }
 
+  routeToSignIn(){
+    this.routed = false;
+    this.router.navigate(['/sign-in'])
+  }
+
   routeToUser(){
     this.routed = false;
     this.router.navigate(['/user'])
