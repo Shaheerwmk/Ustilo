@@ -14,9 +14,15 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
+  {
+    path: 'sign-up', component: UserComponent,
+    children: [{ path: '', component: SignUpComponent }]
+  },
+  {
+      path: 'sign-in', component: UserComponent,
+      children: [{ path: '', component: SignInComponent }]
+  },
   { path: 'user', component: UserComponent },
-  { path: 'sign-up', component: SignUpComponent },
-  { path: 'sign-in', component: SignInComponent },
   { path: 'home', component: HomeComponent },
   { path:'', redirectTo:'user', pathMatch:'full'}
 ];
