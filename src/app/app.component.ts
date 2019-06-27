@@ -27,4 +27,9 @@ export class AppComponent {
     this.routed = false;
     this.router.navigate(['/user'])
   }
+
+  routeToQuery(){
+    this.routed = true;
+    this.router.navigate(['/query'])
+  }
 }

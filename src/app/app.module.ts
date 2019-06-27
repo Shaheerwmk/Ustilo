@@ -12,6 +12,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { QueryService } from './shared/query.service';
+import { QueryComponent } from './query/query.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 const appRoutes: Routes = [
   {
@@ -24,6 +27,7 @@ const appRoutes: Routes = [
   },
   { path: 'user', component: UserComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'query', component: QueryComponent },
   { path:'', redirectTo:'user', pathMatch:'full'}
 ];
 
@@ -33,7 +37,8 @@ const appRoutes: Routes = [
     UserComponent,
     SignUpComponent,
     SignInComponent,
-    HomeComponent
+    HomeComponent,
+    QueryComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +47,10 @@ const appRoutes: Routes = [
     FormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgGridModule.withComponents([])
   ],
-  providers: [UserService],
+  providers: [UserService, QueryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

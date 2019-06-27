@@ -1,0 +1,40 @@
+<button (click)='testAPI()'>
+  Check API
+</button>
+
+<nav>
+    <div class="nav-wrapper" *ngIf='working'>
+      <a href="#" class="brand-logo center">
+        <i class="material-icons">cloud</i>Get Working</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row" *ngIf="workingData">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-content">
+          <div *ngFor="let wor of workingData">
+              <span>Username :{{wor.UserName}}</span>
+              <br>
+              <span>Help : {{wor.Help}}</span>
+              <br>
+              <span>Name : {{wor.Name}}</span>
+              <br>
+              <span>Location : {{wor.Location}}</span>
+          </div>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ag-grid-angular 
+    style="width: 1120px; height: 600px;"
+    class="ag-theme-balham"
+    [rowData]="rowData | async"
+    [columnDefs]="columnDefs"
+    >
+</ag-grid-angular>
